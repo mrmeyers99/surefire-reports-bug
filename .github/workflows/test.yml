@@ -9,8 +9,11 @@ on:
   push:
     branches:
       - main
+permissions:
+  contents: read
+  checks: write
 jobs:
-  sonar-check:
+  parser-results:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
