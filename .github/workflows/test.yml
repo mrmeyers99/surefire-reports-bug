@@ -13,8 +13,8 @@ permissions:
   contents: read
   checks: write
 jobs:
-  parser-results:
-    runs-on: ubuntu-latest
+  parse-results:
+    runs-on: ${{ fromJSON(vars.SWI_GLORG_UBUNTU_2204) }} 
     steps:
       - uses: actions/checkout@v3
 
